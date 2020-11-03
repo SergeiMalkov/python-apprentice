@@ -12,7 +12,7 @@ from urllib.request import urlopen
 #     print(word)
 
 def fetch_words():
-    with urlopen('http://sixty-north.com/c/t.txt') as story:
+    with urlopen("http://sixty-north.com/c/t.txt") as story:
         story_words = []
         for line in story:
             line_words = line.decode("utf-8").split()
@@ -22,4 +22,7 @@ def fetch_words():
     for word in story_words:
         print(word)
 
-print(__name__)
+
+# print(__name__)
+if __name__ == "__main__":
+    fetch_words()
